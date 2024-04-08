@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="min/css/all.min.css">
+    <link rel="stylesheet" href="min/css/normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="icon">
+        <i  id="lightMood" class="fa-solid fa-moon"></i>    </div>
+    
+    <div class="cruds">
+        <div class="head">
+            <h2>cruds</h2>
+            <p>Product Management System </p>
+        </div>
+
+
+        <div class="inputs">
+            <input type="text" id="title" placeholder="Title">
+            <span id="field-title">* fill out required field</span>
+            <div class="collect">
+                <input onkeyup="totalPrice()" type="number" id="price"   placeholder="Price">
+                <input onkeyup="totalPrice()" type="number" id="taxes" placeholder="Taxes">
+                <input onkeyup="totalPrice()" type="number" id="ads" placeholder="Ads">
+                <input onkeyup="totalPrice()" type="number" id="discount" placeholder="Discount">
+                <span id="total"></span>
+            </div>
+            <p id="field-price">* fill out at least price</p>
+            <input type="number" id="count" placeholder="Count">
+            <span id="field-count">* enter at least one product, but no more than a hundred</span>
+            <input type="text" id="category" placeholder="Category">
+            <span id="field-category">* fill out required field</span>
+            <button id="create">Create</button>
+        </div>
+
+
+
+
+        <div class="outputs">
+            <input onkeyup="searchInput(this.value)" type="search" id="search"  placeholder="Search">
+            <div class="search-by">
+                <button onclick="searchType(this.id)" id="searchByTitle">Search By Title</button>
+                <button onclick="searchType(this.id)" id="searchByCategory">Search By Category</button>
+            </div>
+
+            <div id="deleteAll">
+                
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Taxes</th>
+                        <th>Ads</th>
+                        <th>Discount</th>
+                        <th>Total</th>
+                        <th>Category</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <div >
+                        
+                    </div>
+                    <!--     -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
